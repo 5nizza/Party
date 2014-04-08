@@ -184,7 +184,7 @@ def p_error(p):
         print("Syntax error at '%s'" % p.value)
         print("lineno: %d" % p.lineno)
     else:
-        print('Syntax error, t is None')
+        print('Syntax error, no info available')
     assert 0
 
 

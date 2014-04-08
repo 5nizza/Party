@@ -2,6 +2,10 @@ from collections import Iterable
 import math
 
 
+def stripped_tokens(list_of_tokens) -> list:
+    return [t.strip() for t in list_of_tokens if t.strip()]
+
+
 def distinct(iterable):
     d = dict((repr(x),x) for x in iterable)
     res = list(d.values())
@@ -18,6 +22,16 @@ def lmap(lambda_func, iterable) -> list:
 
 def lfilter(lambda_func, iterable) -> list:
     return list(filter(lambda_func, iterable))
+
+
+def separate(criteria, iterable) -> (list,list):
+    yes, no = [],[]
+    for e in iterable:
+        if criteria(e):
+            yes.append(e)
+        else:
+            no.append(e)
+    return yes,no
 
 
 def add_dicts(*dicts) -> dict:
