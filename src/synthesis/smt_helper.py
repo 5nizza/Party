@@ -28,8 +28,8 @@ def get_bits_definition(arg_prefix, nof_bits):
 
 
 def make_check_sat():
-    # return "(check-sat)"
-    return "(check-sat-using (then qe smt))"
+    return "(check-sat)"
+    # return "(check-sat-using (then qe smt))"  # This significantly slows down p_bosy
 
 
 def make_push(level=1):
@@ -55,7 +55,8 @@ def make_set_logic(logic):
 def make_headers():
     #TODO: ask stackoverflow about other speed-ups
     #ematching slows down if forall quantifier is present
-    return '(set-option :produce-models true)\n(set-option :EMATCHING false)\n'
+    #return '(set-option :produce-models true)\n(set-option :EMATCHING false)\n'
+    return '(set-option :produce-models true)\n'
 
 
 #TODO: no need of constraints for input values
