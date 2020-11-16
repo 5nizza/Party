@@ -1,3 +1,8 @@
+__UPDATE__
+> Please visit [party-elli](https://github.com/5nizza/party-elli) for the SMT based bounded synthesis tool.
+> That version does not synthesize token rings, but is much cleaner and will be supported in future.
+> If you want to play with the SMT based bounded synthesis and develop a new tool, [party-elli](https://github.com/5nizza/party-elli) might be good way to start.
+
 # Party #
 
 Parameterized Synthesis of Token Rings
